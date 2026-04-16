@@ -8,6 +8,12 @@ RF01, RF04, RF05, RF06, RF10
 - endereco
 - rfid
 - status
+- contratarPlano()
+- agendarAula()
+- cancelarAgendamento()
+- atualizarStatus()
+- registrarAcesso()
+- receberNotificação()
 
 ***Plano***
 RF01, RF02, RF04
@@ -16,6 +22,9 @@ RF01, RF02, RF04
 - tipo
 - valor
 - ativo
+- ativar()
+- desativar()
+- alterarValor()
 
 ***Pagamento***
 RF03, RF04, RF09
@@ -24,12 +33,20 @@ RF03, RF04, RF09
 - valor
 - formaPagamento
 - status
+- realizar()
+- cancelar()
+- gerarComprovante()
+- consultarStatus()
 
 ***Acesso***
 RF05, RF09
 - idAcesso
 - dataHora
 - autorizado
+- registrarEntrada()
+- registrarSaida()
+- validarAcesso()
+- consultarHistorico()
 
 ***Aula***
 RF06, RF07, RF09
@@ -37,18 +54,29 @@ RF06, RF07, RF09
 - nome
 - horario
 - capacidadeMaxima
+- cadastrarAula()
+- atualizarAula()
+- cancelarAula()
+- listarAlunos()
 
 ***Agendamento***
 RF06, RF10
 - idAgendamento
 - dataReserva
 - status
+- agendar()
+- cancelar()
+- reagendar()
+- confirmarPresenca()
 
 ***Presenca***
 RF07
 - idPresenca
 - data
 - presente
+- registrarPresenca()
+- justificarFalta()
+- consultarPresenca()
 
 ***AvaliacaoFisica***
 RF08, RF10
@@ -59,6 +87,10 @@ RF08, RF10
 - percentualGordura
 - observacoes
 - anexo
+- registrarAvaliacao()
+- atualizarAvaliacao()
+- consultarResultados()
+- gerarRelatorio()
 
 ***Notificacao***
 RF10
@@ -67,19 +99,32 @@ RF10
 - dataEnvio
 - status
 - mensagem
+- enviarNotificacao()
+- agendarNotificacao()
+- cancelarNotificacao()
+- visualizarNotificacao()
 
 ***Instrutor***
 RF07, RF08
 - idInstrutor
 - nome
 - especialidade
+- cadastrarAula()
+- registrarPresenca()
+- realizarAvaliacao()
 
 ***Recepcionista***
 RF01, RF03
 - idRecepcionista
 - nome
+- cadastrarAluno()
+- registrarPagamento()
+- agendarAula()
 
 ***Gerente***
 RF02, RF09
 - idGerente
 - nome
+- gerarRelatorio()
+- gerenciarFuncionarios()
+- analisarDesempenho()
